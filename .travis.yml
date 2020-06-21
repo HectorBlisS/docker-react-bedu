@@ -10,3 +10,4 @@ script:
 
 after_succes:
   - docker tag react-prod gcr.io/dockertraining-279720/react-prod:travistry
+  - docker push gcr.io/dockertraining-279720/react-prod
