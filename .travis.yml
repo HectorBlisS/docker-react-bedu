@@ -1,0 +1,12 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t react-prod .
+
+script:
+  - docker run react-prod
+
+after_succes:
+  - docker tag react-prod gcr.io/dockertraining-279720/react-prod:travistry
